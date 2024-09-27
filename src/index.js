@@ -6,7 +6,7 @@ import { AppVersion } from "./models/AppVersion.js"; // Importar el nuevo modelo
 
 async function main() {
   try {
-    await sequelize.sync({ force: true });
+    await sequelize.sync({ force: false });
     console.log("DB connected");
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
